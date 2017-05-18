@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CSM Matlab Docs</title>
+
+    <!-- Bootstrap -->
+    <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
+    <link href="https://bootswatch.com/cosmo/bootstrap.min.css" rel="stylesheet">
+
+    <link href="css/csm/bootstrap-live.css" rel="stylesheet">
+    <link href="css/csm/csm.css" rel="stylesheet">
+  <!--  <link href="css/csm/lavish.css" rel="stylesheet"> -->
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+
+    <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+    <![endif]-->
+
+    <!-- Google Prettify for syntax highlighting -->
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?lang=matlab"></script>
+</head>
+<body>
+
+
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" id="nav-logo" href="index.html"><img src="images/IMPaCTS Logo-01.png" height="50px" /></a>
+            <a class="navbar-brand" href="https://github.com/csmsoftware/IMPaCTS">Github source</a>
+            <a class="navbar-brand" href="https://csmsoftware.github.io">CSM software </a>
+
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-sm-3">
+
+            <ul class="list-group" id="side-nav">
+    <li class="list-group-item menu-button" id="guides-main-menu">
+        <a href="#">General guides</a>
+    </li>
+    <ul class="sub-menu" id="guides-sub-menu">
+        <li class="list-group-item">
+            <a href="getting-started.html">Getting Started</a>
+        </li>
+        <li class="list-group-item">
+            <a href="toolbox-datatypes.html">Toolbox Datatypes</a>
+        </li>
+        <li class="list-group-item">
+            <a href="migrations.html">Migrations</a>
+        </li>
+        <li class="list-group-item">
+            <a href="import-raw-bruker.html">Importing Raw Bruker NMR</a>
+        </li>
+    </ul>
+
+    <!--
+        <li class="list-group-item">
+            <a href="aligning-spectra.html">Aligning Spectra</a>
+        </li>
+        <li class="list-group-item">
+            <a href="run-pca.html">Run a PCA</a>
+        </li>
+        <li class="list-group-item">
+            <a href="run-opls.html">Run an OPLS</a>
+        </li>
+    </ul> -->
+
+   <li class="list-group-item menu-button" id="data-models-main-menu"><a href="#">Data Models</a></li><ul class="sub-menu" id="data-models-sub-menu"><li class="list-group-item"><a href="csm_spectra.html">csm spectra</a></li><li class="list-group-item"><a href="csm_nmr_spectra.html">csm nmr spectra</a></li><li class="list-group-item"><a href="csm_jres_spectra.html">csm jres spectra</a></li><li class="list-group-item"><a href="csm_ms_spectra.html">csm ms spectra</a></li><li class="list-group-item"><a href="csm_wrapper.html">csm wrapper</a></li><li class="list-group-item"><a href="csm_figure.html">csm figure</a></li><li class="list-group-item"><a href="csm_bruker_acquisition_data.html">csm bruker acquisition data</a></li><li class="list-group-item"><a href="csm_bruker_acquisition_data_entry.html">csm bruker acquisition data entry</a></li><li class="list-group-item"><a href="csm_ms_features.html">csm ms features</a></li><li class="list-group-item"><a href="csm_nmr_calibration_info.html">csm nmr calibration info</a></li><li class="list-group-item"><a href="csm_nmr_calibration_info_entry.html">csm nmr calibration info entry</a></li><li class="list-group-item"><a href="csm_nmr_experiment_info.html">csm nmr experiment info</a></li><li class="list-group-item"><a href="csm_nmr_experiment_info_entry.html">csm nmr experiment info entry</a></li><li class="list-group-item"><a href="csm_sample_metadata.html">csm sample metadata</a></li><li class="list-group-item"><a href="csm_sample_metadata_entry.html">csm sample metadata entry</a></li></ul><li class="list-group-item menu-button" id="migrations-main-menu"><a href="#">Migrations</a></li><ul class="sub-menu" id="migrations-sub-menu"><li class="list-group-item"><a href="csm_export_spectra_hdf.html">csm export spectra hdf</a></li><li class="list-group-item"><a href="csm_import_spectra_hdf.html">csm import spectra hdf</a></li><li class="list-group-item"><a href="csm_import_raw_nmr.html">csm import raw nmr</a></li><li class="list-group-item"><a href="csm_import_nmr_spectra.html">csm import nmr spectra</a></li><li class="list-group-item"><a href="csm_import_spectra_progenesis_qi.html">csm import spectra progenesis qi</a></li><li class="list-group-item"><a href="csm_import_spectra_xcms.html">csm import spectra xcms</a></li><li class="list-group-item"><a href="csm_import_spectra_static.html">csm import spectra static</a></li><li class="list-group-item"><a href="csm_import_generic_file.html">csm import generic file</a></li><li class="list-group-item"><a href="csm_import_generic_folder.html">csm import generic folder</a></li><li class="list-group-item"><a href="csm_import_bruker_acquisition_data.html">csm import bruker acquisition data</a></li><li class="list-group-item"><a href="csm_import_nmr_calibration_info.html">csm import nmr calibration info</a></li><li class="list-group-item"><a href="csm_import_nmr_experiment_info.html">csm import nmr experiment info</a></li><li class="list-group-item"><a href="csm_import_sample_metadata.html">csm import sample metadata</a></li></ul><li class="list-group-item menu-button" id="preprocessing-main-menu"><a href="#">Preprocessing</a></li><ul class="sub-menu" id="preprocessing-sub-menu"><li class="list-group-item"><a href="csm_calibrate_nmr.html">csm calibrate nmr</a></li><li class="list-group-item"><a href="csm_interpolate_nmr.html">csm interpolate nmr</a></li><li class="list-group-item"><a href="csm_normalise.html">csm normalise</a></li><li class="list-group-item"><a href="csm_scale.html">csm scale</a></li><li class="list-group-item"><a href="csm_rspa.html">csm rspa</a></li><li class="list-group-item"><a href="csm_gui_alignment.html">csm gui alignment</a></li></ul><li class="list-group-item menu-button" id="analysis-main-menu"><a href="#">Analysis</a></li><ul class="sub-menu" id="analysis-sub-menu"><li class="list-group-item"><a href="csm_pca.html">csm pca</a></li></ul><li class="list-group-item menu-button" id="figures-main-menu"><a href="#">Figures</a></li><ul class="sub-menu" id="figures-sub-menu"><li class="list-group-item"><a href="csm_figure.html">csm figure</a></li><li class="list-group-item"><a href="csm_plot_pca.html">csm plot pca</a></li><li class="list-group-item"><a href="csm_plot_spectra.html">csm plot spectra</a></li><li class="list-group-item"><a href="csm_plot_stack.html">csm plot stack</a></li></ul><li class="list-group-item menu-button" id="utilities-main-menu"><a href="#">Utilities</a></li><ul class="sub-menu" id="utilities-sub-menu"><li class="list-group-item"><a href="clone.html">clone</a></li><li class="list-group-item"><a href="csm_hdf_tools.html">csm hdf tools</a></li><li class="list-group-item"><a href="csm_object_converter.html">csm object converter</a></li><li class="list-group-item"><a href="csm_progress_bar.html">csm progress bar</a></li></ul>
+</ul>
+
+        </div>
+        <div class="col-sm-9">
+
+            <div class="jumbotron">
+    <h2>Toolbox Datatypes</h2>
+    <p>The following is a short guide to some of the datatypes used in this toolbox.</p>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3>
+            General datatypes
+        </h3>
+    </div>
+    <div class="panel-body">
+        <p>Matlab has support for matrixes, cell arrays, structs, maps, tables and objects. If you are not familiar with the basic Matlab datatypes please refer to the <a href="https://uk.mathworks.com/help/matlab/language-fundamentals.html">Matlab documentation</a>.</p>
+    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3>
+            <a href="csm_spectra.html">csm_spectra</a>
+        </h3>
+    </div>
+    <div class="panel-body">
+        <p><a href="csm_spectra.html">csm_spectra</a> is the main container for spectral data. It contains X, a m*n matrix of intensities, x_scale, a 1*n vector of chemical shift, and user specific sample metadata.  </p>
+        <p><a href="csm_nmr_spectra.html">csm_nmr_spectra</a> and <a href="csm_ms_spectra.html">csm_ms_spectra</a> extend <a href="csm_spectra.html">csm_spectra</a> and should be used for these platforms. </p>
+        <p>Creating a <a href="csm_nmr_spectra.html">csm_nmr_spectra</a> object:</p>
+<pre class="prettyprint lang-matlab">
+X = [ 0 : 5 ];
+ppm = [ 0 : 5 ];
+spectra = <a href="csm_nmr_spectra.html">csm_nmr_spectra</a>( X , ppm );
+
+spectra.X
+
+ans =
+
+  Columns 1 through 5
+
+    1     2     3     4     5
+</pre>
+        <p>You can specify the sample_ids using varargin. sample_ids is a cell array of the sample IDs.
+<pre class="prettyprint lang-matlab">
+X = [ 0 : 5 ];
+ppm = [ 0 : 5 ];
+sample_ids = {'Sample 1','Sample 2','Sample 3','Sample 4','Sample 5'};
+spectra = <a href="csm_nmr_spectra.html">csm_nmr_spectra</a>( X , ppm , 'sample_ids', sample_ids );
+
+spectra.sample_ids
+
+ans =
+
+    'Sample 1'    'Sample 2'    'Sample 3'    'Sample 4'    'Sample 5'
+</pre>
+
+        <p>Other sample metadata can be stored in the <a href="csm_spectra.html">csm_spectra</a> object. You can import the metadata for a<a href="csm_spectra.html"> spectra </a>using the following method:</p>
+<pre class="prettyprint lang-matlab">
+X = [ 0 : 5 ];
+ppm = [ 0 : 5 ];
+sample_ids = {'Sample 1','Sample 2','Sample 3','Sample 4','Sample 5'};
+spectra = <a href="csm_nmr_spectra.html">csm_nmr_spectra</a>( X , ppm , 'sample_ids', sample_ids );
+
+metadata_import_worker = <a href="csm_import_sample_metadata.html">csm_import_sample_metadata</a>( 'filename', metadata_path );
+
+spectra = <a href="csm_nmr_spectra.html">csm_nmr_spectra</a>( X , ppm , 'sample_ids', sample_ids, 'sample_metadata', metadata_import_worker.sample_metadata );
+</pre>
+
+        <p>The method <a href="csm_nmr_spectra.html">csm_nmr_spectra</a>.sample_metadata.getTable() will return a Matlab Table of the sample metadata, used for plotting functions.</p>
+<pre class="prettyprint lang-matlab">
+spectra.sample_metadata.getTable();
+</pre>
+
+        <p>See <a href="csm_spectra.html">csm_spectra</a>, <a href="csm_nmr_spectra.html">csm_nmr_spectra</a>, <a href="csm_ms_spectra.html">csm_ms_spectra</a> and <a href="csm_jres_spectra.html">csm_jres_spectra</a> for more information.</p>
+    </div>
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3>
+            <a href="csm_wrapper.html">csm_wrapper</a>
+        </h3>
+    </div>
+    <div class="panel-body">
+        <p><a href="csm_wrapper.html">csm_wrapper</a> is the API base class for accessing the legacy methods in the toolbox.</p>
+        <p>This means that the legacy wrappers extend this class, and thereby inherit it's properties and methods.</p>
+        <p>The input arguments are stored as a struct in <a href="csm_wrapper.html">csm_wrapper</a>.input, and the output is stored as a struct in <a href="csm_wrapper.html">csm_wrapper</a>.output.</p>
+        <p>There outputs can be accessed as follows:</p>
+        <pre class="prettyprint lang-matlab">
+X = [ 0 : 5 ];
+ppm = [ 0 : 5 ];
+spectra = <a href="csm_nmr_spectra.html">csm_nmr_spectra</a>( X , ppm );
+
+pca_model = <a href="csm_pca.html">csm_pca</a>( <a href="csm_spectra.html">csm_spectra</a>, 3 );
+
+loadings = pca_model.output.P
+
+ans =
+
+    0.5860    0.3678    0.1253   -0.1172   -0.3597   -0.6021
+    0.5443    0.2722    0.1361   -0.1361   -0.5443   -0.5443
+    0.5443    0.2722    0.1361   -0.1361   -0.5443   -0.5443
+
+</pre> <p>Please refer to the function documentation for the list of output variables.</p>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3>
+            <a href="csm_figure.html">csm_figure</a> < <a href="csm_wrapper.html">csm_wrapper</a>
+        </h3>
+    </div>
+    <div class="panel-body">
+        <p><a href="csm_figure.html">csm_figure</a> extends <a href="csm_wrapper.html">csm_wrapper</a> by adding graphic handles to the objects.</p>
+        <p>Handles for output figures are stored in a cell array in output.handles, and can be accessed as follows:</p>
+        <pre class="prettyprint lang-matlab">
+X = [ 0 : 5 ];
+ppm = [ 0 : 5 ];
+spectra = <a href="csm_nmr_spectra.html">csm_nmr_spectra</a>( X , ppm );
+
+pca_model = <a href="csm_pca.html">csm_pca</a>( <a href="csm_spectra.html">csm_spectra</a>, 3 );
+
+pca_plot = <a href="csm_plot_pca.html">csm_plot_pca</a>(pca_model);
+
+pca_plot = <a href="csm_plot_pca.html">csm_plot_pca</a>(pca_model);
+
+pca_plot.handles
+
+ans =
+
+    [1x1 Figure]    [1x1 Figure]    [1x1 Figure]    [1x1 Figure]
+
+pca_plot.handles{1}
+
+ans =
+
+  Figure (1: PCA scores coloured by class1 PC1vs2) with properties:
+
+      Number: 1
+        Name: 'PCA scores coloured by class1 PC1vs2'
+       Color: [1 1 1]
+    Position: [560 528 560 420]
+       Units: 'pixels'
+
+  Show all properties
+
+</pre>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-body">
+        <p>Now we've covered the basic types, it's time to read about <a href="migrations.html">data import and export</a>.</p>
+
+    </div>
+</div>
+
+
+            
+
+            
+
+            
+
+            
+
+            
+
+        </div>
+    </div>
+    <div class="row" style="height:100px;"></div>
+</div>
+
+<p style="text-align:center;">Copyright Imperial College London 2017</p>
+
+
+</div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+
+        OpenMenu();
+
+        $(document).ready( function () {
+
+            MenuMover();
+
+        });
+
+        function OpenMenu() {
+
+            var pathname = window.location.pathname;
+            var pathsplit = pathname.split('/');
+
+            var filename = pathsplit[pathsplit.length-1];
+
+            var menu = $('a[href="' + filename + '"]').parent().parent().prop('id');
+
+            if ($('#' + menu).css('display') == 'none'){
+
+                $('#' + menu).css('display','block');
+
+            }
+
+        }
+
+        function MenuMover() {
+
+            $('.menu-button').click(function(ev) {
+
+                ev.preventDefault();
+
+                // Open Menu
+
+                var clicked_parent_menu = $(this).prop('id');
+                var clicked_menu_name = clicked_parent_menu.substring(0,clicked_parent_menu.indexOf('-main-menu'));
+
+                var clicked_sub_menu_select = '#' + clicked_menu_name + '-sub-menu';
+
+
+                $('.menu-button').each(function(ev) {
+
+                    var other_parent_menu = $(this).prop('id');
+                    var other_menu_name = other_parent_menu.substring(0,other_parent_menu.indexOf('-main-menu'));
+
+                    var other_sub_menu_select = '#' + other_menu_name + '-sub-menu';
+
+                    if ($(other_sub_menu_select).is(':hidden') == false && other_menu_name != clicked_menu_name ){
+
+                        $(other_sub_menu_select).slideToggle();
+
+                    }
+                });
+
+                $(clicked_sub_menu_select).slideToggle();
+
+            });
+
+        }
+
+    </script>
+    <script type="text/javascript">
+        !function ($) {
+            $(function(){
+                window.prettyPrint && prettyPrint()
+            })
+        }(window.jQuery)
+    </script>
+</div>
+</body>
+</html>

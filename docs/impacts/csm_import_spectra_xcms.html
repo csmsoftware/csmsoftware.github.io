@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CSM Matlab Docs</title>
+
+    <!-- Bootstrap -->
+    <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
+    <link href="https://bootswatch.com/cosmo/bootstrap.min.css" rel="stylesheet">
+
+    <link href="css/csm/bootstrap-live.css" rel="stylesheet">
+    <link href="css/csm/csm.css" rel="stylesheet">
+  <!--  <link href="css/csm/lavish.css" rel="stylesheet"> -->
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+
+    <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+    <![endif]-->
+
+    <!-- Google Prettify for syntax highlighting -->
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?lang=matlab"></script>
+</head>
+<body>
+
+
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" id="nav-logo" href="index.html"><img src="images/IMPaCTS Logo-01.png" height="50px" /></a>
+            <a class="navbar-brand" href="https://github.com/csmsoftware/IMPaCTS">Github source</a>
+            <a class="navbar-brand" href="https://csmsoftware.github.io">CSM software </a>
+
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-sm-3">
+
+            <ul class="list-group" id="side-nav">
+    <li class="list-group-item menu-button" id="guides-main-menu">
+        <a href="#">General guides</a>
+    </li>
+    <ul class="sub-menu" id="guides-sub-menu">
+        <li class="list-group-item">
+            <a href="getting-started.html">Getting Started</a>
+        </li>
+        <li class="list-group-item">
+            <a href="toolbox-datatypes.html">Toolbox Datatypes</a>
+        </li>
+        <li class="list-group-item">
+            <a href="migrations.html">Migrations</a>
+        </li>
+        <li class="list-group-item">
+            <a href="import-raw-bruker.html">Importing Raw Bruker NMR</a>
+        </li>
+    </ul>
+
+    <!--
+        <li class="list-group-item">
+            <a href="aligning-spectra.html">Aligning Spectra</a>
+        </li>
+        <li class="list-group-item">
+            <a href="run-pca.html">Run a PCA</a>
+        </li>
+        <li class="list-group-item">
+            <a href="run-opls.html">Run an OPLS</a>
+        </li>
+    </ul> -->
+
+   <li class="list-group-item menu-button" id="data-models-main-menu"><a href="#">Data Models</a></li><ul class="sub-menu" id="data-models-sub-menu"><li class="list-group-item"><a href="csm_spectra.html">csm spectra</a></li><li class="list-group-item"><a href="csm_nmr_spectra.html">csm nmr spectra</a></li><li class="list-group-item"><a href="csm_jres_spectra.html">csm jres spectra</a></li><li class="list-group-item"><a href="csm_ms_spectra.html">csm ms spectra</a></li><li class="list-group-item"><a href="csm_wrapper.html">csm wrapper</a></li><li class="list-group-item"><a href="csm_figure.html">csm figure</a></li><li class="list-group-item"><a href="csm_bruker_acquisition_data.html">csm bruker acquisition data</a></li><li class="list-group-item"><a href="csm_bruker_acquisition_data_entry.html">csm bruker acquisition data entry</a></li><li class="list-group-item"><a href="csm_ms_features.html">csm ms features</a></li><li class="list-group-item"><a href="csm_nmr_calibration_info.html">csm nmr calibration info</a></li><li class="list-group-item"><a href="csm_nmr_calibration_info_entry.html">csm nmr calibration info entry</a></li><li class="list-group-item"><a href="csm_nmr_experiment_info.html">csm nmr experiment info</a></li><li class="list-group-item"><a href="csm_nmr_experiment_info_entry.html">csm nmr experiment info entry</a></li><li class="list-group-item"><a href="csm_sample_metadata.html">csm sample metadata</a></li><li class="list-group-item"><a href="csm_sample_metadata_entry.html">csm sample metadata entry</a></li></ul><li class="list-group-item menu-button" id="migrations-main-menu"><a href="#">Migrations</a></li><ul class="sub-menu active" id="migrations-sub-menu"><li class="list-group-item"><a href="csm_export_spectra_hdf.html">csm export spectra hdf</a></li><li class="list-group-item"><a href="csm_import_spectra_hdf.html">csm import spectra hdf</a></li><li class="list-group-item"><a href="csm_import_raw_nmr.html">csm import raw nmr</a></li><li class="list-group-item"><a href="csm_import_nmr_spectra.html">csm import nmr spectra</a></li><li class="list-group-item"><a href="csm_import_spectra_progenesis_qi.html">csm import spectra progenesis qi</a></li><li class="list-group-item"><a href="csm_import_spectra_xcms.html">csm import spectra xcms</a></li><li class="list-group-item"><a href="csm_import_spectra_static.html">csm import spectra static</a></li><li class="list-group-item"><a href="csm_import_generic_file.html">csm import generic file</a></li><li class="list-group-item"><a href="csm_import_generic_folder.html">csm import generic folder</a></li><li class="list-group-item"><a href="csm_import_bruker_acquisition_data.html">csm import bruker acquisition data</a></li><li class="list-group-item"><a href="csm_import_nmr_calibration_info.html">csm import nmr calibration info</a></li><li class="list-group-item"><a href="csm_import_nmr_experiment_info.html">csm import nmr experiment info</a></li><li class="list-group-item"><a href="csm_import_sample_metadata.html">csm import sample metadata</a></li></ul><li class="list-group-item menu-button" id="preprocessing-main-menu"><a href="#">Preprocessing</a></li><ul class="sub-menu" id="preprocessing-sub-menu"><li class="list-group-item"><a href="csm_calibrate_nmr.html">csm calibrate nmr</a></li><li class="list-group-item"><a href="csm_interpolate_nmr.html">csm interpolate nmr</a></li><li class="list-group-item"><a href="csm_normalise.html">csm normalise</a></li><li class="list-group-item"><a href="csm_scale.html">csm scale</a></li><li class="list-group-item"><a href="csm_rspa.html">csm rspa</a></li><li class="list-group-item"><a href="csm_gui_alignment.html">csm gui alignment</a></li></ul><li class="list-group-item menu-button" id="analysis-main-menu"><a href="#">Analysis</a></li><ul class="sub-menu" id="analysis-sub-menu"><li class="list-group-item"><a href="csm_pca.html">csm pca</a></li></ul><li class="list-group-item menu-button" id="figures-main-menu"><a href="#">Figures</a></li><ul class="sub-menu" id="figures-sub-menu"><li class="list-group-item"><a href="csm_figure.html">csm figure</a></li><li class="list-group-item"><a href="csm_plot_pca.html">csm plot pca</a></li><li class="list-group-item"><a href="csm_plot_spectra.html">csm plot spectra</a></li><li class="list-group-item"><a href="csm_plot_stack.html">csm plot stack</a></li></ul><li class="list-group-item menu-button" id="utilities-main-menu"><a href="#">Utilities</a></li><ul class="sub-menu" id="utilities-sub-menu"><li class="list-group-item"><a href="clone.html">clone</a></li><li class="list-group-item"><a href="csm_hdf_tools.html">csm hdf tools</a></li><li class="list-group-item"><a href="csm_object_converter.html">csm object converter</a></li><li class="list-group-item"><a href="csm_progress_bar.html">csm progress bar</a></li></ul>
+</ul>
+
+        </div>
+        <div class="col-sm-9">
+
+            <div class="jumbotron"><h2>CSM Import Spectra XCMS</h2><br /><p>Import worker for XCMS format</p><p>	Import worker for importing from XCMS. Only imports MS objects.</p></div>
+
+            <div class="panel panel-default"><div class="panel-heading"><h3>Usage</h3></div><div class="panel-body"><p style="font-size:20px;"> 	imported = csm_import_worker_xcms( 'filename', filename );</p></div></div>
+
+            <div class="panel panel-default"><div class="panel-heading"><h3>Arguments <span style="font-size:18px">(* = required)</span></h3></div><div class="panel-body"><table class="table table-striped table-bordered table-condensed"><tr><th>Variable</th><th>Type</th><th>Default Value</th><th>Description</th></tr><tr><td class="optional-argument">filename</td><td>str</td><td><i>None</i></td><td>The file to import.</td></tr></table></div></div>
+
+            <div class="panel panel-default"><div class="panel-heading"><h3>Returns</h3></div><div class="panel-body"><table class="table table-striped table-bordered table-condensed"><tr><th>Variable</th><th>Type</th><th>Description</th></tr><tr><td>imported</td><td>csm_import_worker_xcms</td><td>Import worker with imported spectra.</td></tr><tr><td>   imported.spectra</td><td><a href="csm_ms_spectra.html">csm_ms_spectra</a></td><td>Imported<a href="csm_spectra.html"> spectra </a>object</td></tr></table></div></div>
+
+            
+
+            
+
+        </div>
+    </div>
+    <div class="row" style="height:100px;"></div>
+</div>
+
+<p style="text-align:center;">Copyright Imperial College London 2017</p>
+
+
+</div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+
+        OpenMenu();
+
+        $(document).ready( function () {
+
+            MenuMover();
+
+        });
+
+        function OpenMenu() {
+
+            var pathname = window.location.pathname;
+            var pathsplit = pathname.split('/');
+
+            var filename = pathsplit[pathsplit.length-1];
+
+            var menu = $('a[href="' + filename + '"]').parent().parent().prop('id');
+
+            if ($('#' + menu).css('display') == 'none'){
+
+                $('#' + menu).css('display','block');
+
+            }
+
+        }
+
+        function MenuMover() {
+
+            $('.menu-button').click(function(ev) {
+
+                ev.preventDefault();
+
+                // Open Menu
+
+                var clicked_parent_menu = $(this).prop('id');
+                var clicked_menu_name = clicked_parent_menu.substring(0,clicked_parent_menu.indexOf('-main-menu'));
+
+                var clicked_sub_menu_select = '#' + clicked_menu_name + '-sub-menu';
+
+
+                $('.menu-button').each(function(ev) {
+
+                    var other_parent_menu = $(this).prop('id');
+                    var other_menu_name = other_parent_menu.substring(0,other_parent_menu.indexOf('-main-menu'));
+
+                    var other_sub_menu_select = '#' + other_menu_name + '-sub-menu';
+
+                    if ($(other_sub_menu_select).is(':hidden') == false && other_menu_name != clicked_menu_name ){
+
+                        $(other_sub_menu_select).slideToggle();
+
+                    }
+                });
+
+                $(clicked_sub_menu_select).slideToggle();
+
+            });
+
+        }
+
+    </script>
+    <script type="text/javascript">
+        !function ($) {
+            $(function(){
+                window.prettyPrint && prettyPrint()
+            })
+        }(window.jQuery)
+    </script>
+</div>
+</body>
+</html>

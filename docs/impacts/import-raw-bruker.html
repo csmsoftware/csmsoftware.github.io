@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CSM Matlab Docs</title>
+
+    <!-- Bootstrap -->
+    <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
+    <link href="https://bootswatch.com/cosmo/bootstrap.min.css" rel="stylesheet">
+
+    <link href="css/csm/bootstrap-live.css" rel="stylesheet">
+    <link href="css/csm/csm.css" rel="stylesheet">
+  <!--  <link href="css/csm/lavish.css" rel="stylesheet"> -->
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+
+    <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+    <![endif]-->
+
+    <!-- Google Prettify for syntax highlighting -->
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?lang=matlab"></script>
+</head>
+<body>
+
+
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" id="nav-logo" href="index.html"><img src="images/IMPaCTS Logo-01.png" height="50px" /></a>
+            <a class="navbar-brand" href="https://github.com/csmsoftware/IMPaCTS">Github source</a>
+            <a class="navbar-brand" href="https://csmsoftware.github.io">CSM software </a>
+
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-sm-3">
+
+            <ul class="list-group" id="side-nav">
+    <li class="list-group-item menu-button" id="guides-main-menu">
+        <a href="#">General guides</a>
+    </li>
+    <ul class="sub-menu" id="guides-sub-menu">
+        <li class="list-group-item">
+            <a href="getting-started.html">Getting Started</a>
+        </li>
+        <li class="list-group-item">
+            <a href="toolbox-datatypes.html">Toolbox Datatypes</a>
+        </li>
+        <li class="list-group-item">
+            <a href="migrations.html">Migrations</a>
+        </li>
+        <li class="list-group-item">
+            <a href="import-raw-bruker.html">Importing Raw Bruker NMR</a>
+        </li>
+    </ul>
+
+    <!--
+        <li class="list-group-item">
+            <a href="aligning-spectra.html">Aligning Spectra</a>
+        </li>
+        <li class="list-group-item">
+            <a href="run-pca.html">Run a PCA</a>
+        </li>
+        <li class="list-group-item">
+            <a href="run-opls.html">Run an OPLS</a>
+        </li>
+    </ul> -->
+
+   <li class="list-group-item menu-button" id="data-models-main-menu"><a href="#">Data Models</a></li><ul class="sub-menu" id="data-models-sub-menu"><li class="list-group-item"><a href="csm_spectra.html">csm spectra</a></li><li class="list-group-item"><a href="csm_nmr_spectra.html">csm nmr spectra</a></li><li class="list-group-item"><a href="csm_jres_spectra.html">csm jres spectra</a></li><li class="list-group-item"><a href="csm_ms_spectra.html">csm ms spectra</a></li><li class="list-group-item"><a href="csm_wrapper.html">csm wrapper</a></li><li class="list-group-item"><a href="csm_figure.html">csm figure</a></li><li class="list-group-item"><a href="csm_bruker_acquisition_data.html">csm bruker acquisition data</a></li><li class="list-group-item"><a href="csm_bruker_acquisition_data_entry.html">csm bruker acquisition data entry</a></li><li class="list-group-item"><a href="csm_ms_features.html">csm ms features</a></li><li class="list-group-item"><a href="csm_nmr_calibration_info.html">csm nmr calibration info</a></li><li class="list-group-item"><a href="csm_nmr_calibration_info_entry.html">csm nmr calibration info entry</a></li><li class="list-group-item"><a href="csm_nmr_experiment_info.html">csm nmr experiment info</a></li><li class="list-group-item"><a href="csm_nmr_experiment_info_entry.html">csm nmr experiment info entry</a></li><li class="list-group-item"><a href="csm_sample_metadata.html">csm sample metadata</a></li><li class="list-group-item"><a href="csm_sample_metadata_entry.html">csm sample metadata entry</a></li></ul><li class="list-group-item menu-button" id="migrations-main-menu"><a href="#">Migrations</a></li><ul class="sub-menu" id="migrations-sub-menu"><li class="list-group-item"><a href="csm_export_spectra_hdf.html">csm export spectra hdf</a></li><li class="list-group-item"><a href="csm_import_spectra_hdf.html">csm import spectra hdf</a></li><li class="list-group-item"><a href="csm_import_raw_nmr.html">csm import raw nmr</a></li><li class="list-group-item"><a href="csm_import_nmr_spectra.html">csm import nmr spectra</a></li><li class="list-group-item"><a href="csm_import_spectra_progenesis_qi.html">csm import spectra progenesis qi</a></li><li class="list-group-item"><a href="csm_import_spectra_xcms.html">csm import spectra xcms</a></li><li class="list-group-item"><a href="csm_import_spectra_static.html">csm import spectra static</a></li><li class="list-group-item"><a href="csm_import_generic_file.html">csm import generic file</a></li><li class="list-group-item"><a href="csm_import_generic_folder.html">csm import generic folder</a></li><li class="list-group-item"><a href="csm_import_bruker_acquisition_data.html">csm import bruker acquisition data</a></li><li class="list-group-item"><a href="csm_import_nmr_calibration_info.html">csm import nmr calibration info</a></li><li class="list-group-item"><a href="csm_import_nmr_experiment_info.html">csm import nmr experiment info</a></li><li class="list-group-item"><a href="csm_import_sample_metadata.html">csm import sample metadata</a></li></ul><li class="list-group-item menu-button" id="preprocessing-main-menu"><a href="#">Preprocessing</a></li><ul class="sub-menu" id="preprocessing-sub-menu"><li class="list-group-item"><a href="csm_calibrate_nmr.html">csm calibrate nmr</a></li><li class="list-group-item"><a href="csm_interpolate_nmr.html">csm interpolate nmr</a></li><li class="list-group-item"><a href="csm_normalise.html">csm normalise</a></li><li class="list-group-item"><a href="csm_scale.html">csm scale</a></li><li class="list-group-item"><a href="csm_rspa.html">csm rspa</a></li><li class="list-group-item"><a href="csm_gui_alignment.html">csm gui alignment</a></li></ul><li class="list-group-item menu-button" id="analysis-main-menu"><a href="#">Analysis</a></li><ul class="sub-menu" id="analysis-sub-menu"><li class="list-group-item"><a href="csm_pca.html">csm pca</a></li></ul><li class="list-group-item menu-button" id="figures-main-menu"><a href="#">Figures</a></li><ul class="sub-menu" id="figures-sub-menu"><li class="list-group-item"><a href="csm_figure.html">csm figure</a></li><li class="list-group-item"><a href="csm_plot_pca.html">csm plot pca</a></li><li class="list-group-item"><a href="csm_plot_spectra.html">csm plot spectra</a></li><li class="list-group-item"><a href="csm_plot_stack.html">csm plot stack</a></li></ul><li class="list-group-item menu-button" id="utilities-main-menu"><a href="#">Utilities</a></li><ul class="sub-menu" id="utilities-sub-menu"><li class="list-group-item"><a href="clone.html">clone</a></li><li class="list-group-item"><a href="csm_hdf_tools.html">csm hdf tools</a></li><li class="list-group-item"><a href="csm_object_converter.html">csm object converter</a></li><li class="list-group-item"><a href="csm_progress_bar.html">csm progress bar</a></li></ul>
+</ul>
+
+        </div>
+        <div class="col-sm-9">
+
+            <div class="jumbotron">
+    <h2>
+        Importing raw Bruker NMR
+    </h2>
+    <p>
+    <p><a href="csm_import_raw_nmr.html">csm_import_raw_nmr</a> is a new import system that imports, calibrates and interpolates<a href="csm_spectra.html"> spectra,</a> and will<a href="csm_import_sample_metadata.html"> import sample metadata </a>and run basic analytical QC checks on the data. </p>
+    </p>
+    <p>
+        Usage is either with dialog boxes:
+<pre class="prettyprint lang-matlab">
+>> imported = <a href="csm_import_raw_nmr.html">csm_import_raw_nmr</a>()</pre>
+        Or with specifying the major file paths in a struct:
+    <pre class="prettyprint lang-matlab">
+>> ex = struct;
+ex.sample_metadata_path = strcat( <a href="csm_settings.html">csm_settings</a>.getValue('toolbox_path') , filesep, 'csm_tools', filesep, 'misc', filesep, 'example_data', filesep, 'raw_bruker', filesep, 'sample_metadata.xlsx');
+ex.nmr_experiment_info_path = strcat( <a href="csm_settings.html">csm_settings</a>.getValue('toolbox_path') , filesep, 'csm_tools', filesep, 'misc', filesep, 'example_data', filesep, 'raw_bruker', filesep, 'NMR_experiment_info.xlsx');
+ex.nmr_calibration_info_path = strcat( <a href="csm_settings.html">csm_settings</a>.getValue('toolbox_path') , filesep, 'csm_tools', filesep, 'misc', filesep, 'example_data', filesep, 'raw_bruker', filesep, 'NMR_calibration_info.xlsx');
+ex.experiment_path = strcat( <a href="csm_settings.html">csm_settings</a>.getValue('toolbox_path') , filesep, 'csm_tools', filesep, 'misc', filesep, 'example_data', filesep, 'raw_bruker' );
+imported = <a href="csm_import_raw_nmr.html">csm_import_raw_nmr</a>('experiment_info', ex);
+</pre>
+
+    </p>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3>
+            General info
+        </h3>
+    </div>
+    <div class="panel-body">
+        <p>When importing, the system<a href="csm_import_sample_metadata.html"> import sample metadata,</a> run the preprocessing steps <a href="csm_calibrate_nmr.html">csm_calibrate_nmr</a> and <a href="csm_interpolate_nmr.html">csm_interpolate_nmr</a>, and run QC and handle any errors.</p>
+        <p>Specifications for how the system preprocesses the data are specified in the the required files. </p>
+        <p>Mixed sample types are allowed - so if you have racks with mixed sample types, just specify them in the calibration file. When imported, they will be imported into seperate <a href="csm_spectra.html">csm_spectra</a> objects, per sample type.</p>
+    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3>
+            Requirements
+        </h3>
+    </div>
+    <div class="panel-body">
+        <p>
+            <b>experiment_path</b>
+        </p>
+        <p>The experiment_path is the full path to the parent folder which contains the raw Bruker data.
+        <p>
+            <b>sample_metadata_path</b>
+        </p>
+        <p>The sample_metadata_path is the full path to the file which contains the metadata for the sample.
+        <p>
+            <b>nmr_experiment_info_path</b>
+        </p>
+        <p>The nmr_experiment_info_path is the full path to the file which contains the mappings to the raw Bruker data.</p>
+        <p>
+            <b>nmr_calibration_info_path</b>
+        </p>
+        <p>The nmr_calibration_info_path is the full path to the file which contains the data necessary for spectral calibration.</p>
+
+        <p>For examples of this file, please look in csm_tools/misc/example_data/raw_bruker</p>
+
+        <p>Either enter these into the experiment_info struct when calling the import system, or select them during the dialog prompts.</p>
+
+    </div>
+</div>
+<div class="panel panel-default" id="sample-metadata">
+    <div class="panel-heading">
+        <h3>
+            sample_metadata_path
+        </h3>
+    </div>
+    <div class="panel-body">
+        <p>
+            The sample_metadata.xlsx file contains sample metadata about the experiment. These fields will be imported into the <a href="csm_nmr_spectra.html">csm_nmr_spectra</a> objects.
+        </p>
+
+        <table class="table table-striped table-bordered table-condensed table-smallest">
+            <tbody>
+                <tr>
+                    <th>Sample ID</th><th>Further Sample info</th><th>Case-control pair</th><th>Sampling Date</th><th>Sampling Protocol</th><th>Ship order</th><th>Age</th><th>Gender</th>
+                </tr>
+                <tr>
+                    <td>Sample_1</td><td>Case</td><td>1518</td><td>2010</td><td>3</td><td>1269</td><td>63</td><td>M</td>
+                </tr>
+                <tr>
+                    <td>Sample_2</td><td>Control</td><td>1518</td><td>2010</td><td>3</td><td>1270</td><td>63</td><td>M</td>
+                </tr>
+                <tr>
+                    <td>Sample_3</td><td>Case</td><td>2168</td><td>2010</td><td>3</td><td>1280</td><td>63</td><td>M</td>
+                </tr>
+                <tr>
+                    <td>Sample_4</td><td>Control</td><td>2168</td><td>2010</td><td>3</td><td>1290</td><td>63</td><td>M</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>
+            Once imported and assigned to the variable<a href="csm_spectra.html"> spectra </a>(see <a href="#output">Output</a>), the metadata is saved inside the<a href="csm_sample_metadata.html"> sample_metadata </a>object.
+
+    <pre class="prettyprint lang-matlab">
+>> spectra.sample_metadata
+
+ans =
+
+  <a href="csm_sample_metadata.html">csm_sample_metadata</a> with properties:
+
+                entries: [4x1 containers.Map]
+    dynamic_field_names: {}
+               filename: '/Users/ghaggart/workspace/matlab/IMPaCTS/csm_tools...'
+
+% View the entry keys
+>> keys(spectra.sample_metadata.entries)
+
+ans =
+
+    'Sample_2'    'Sample_1'    'Sample_4'    'Sample_3'
+
+% Get a specific sample_metadata_entry
+>> sample_metadata_entry = spectra.sample_metadata.entries('Sample_2')
+
+sample_metadata_entry =
+
+  <a href="csm_sample_metadata_entry.html">csm_sample_metadata_entry</a> with properties:
+
+         sample_id: 'Sample_2'
+    dynamic_fields: [7x1 containers.Map]
+
+% Get the keys for the dynamic fields (column headers)
+>> keys(sample_metadata_entry.dynamic_fields)
+
+ans =
+
+  Columns 1 through 5
+
+    'Age'    'Case-control pair'    'Further Sample info'    'Gender'    'Sampling Date'
+
+  Columns 6 through 7
+
+    'Sampling Protocol'    'Ship order'
+
+% Get the value for column
+>> sample_metadata_entry.dynamic_fields('Age')
+
+ans =
+
+    63
+    </pre>
+<p>
+        Sample metadata can also be accessed as a table by using:
+        <pre class="prettyprint lang-matlab">
+>> sample_table = spectra.sample_metadata.getTable()
+
+sample_table =
+
+    Sample_ID     Case_control_pair    Further_Sample_info    Gender    Sampling_Date    Sampling_Protocol    Ship_order
+    __________    _________________    ___________________    ______    _____________    _________________    __________
+
+    'Sample_2'    1518                 'Control'              'M'       2010             3                    1270
+    'Sample_1'    1518                 'Case'                 'M'       2010             3                    1269
+    'Sample_4'    2168                 'Control'              'M'       2010             3                    1290
+    'Sample_3'    2168                 'Case'                 'M'       2010             3                    1280
+
+    </pre>
+        </p>
+    </div>
+</div>
+<div class="panel panel-default" id="nmr-experimental-info">
+    <div class="panel-heading">
+        <h3>
+            nmr_experiment_info_path
+        </h3>
+    </div>
+    <div class="panel-body">
+        <p>
+            The NMR_experiment_info.csv file contains the data about the experiment types of the samples, including the output folders, rack position and Instrument type.
+        </p>
+        <p>This is information is necessary for mapping the experimental output to the sample data.</p>
+        <p>The file MUST contain the following: Sample ID, Experiment Number, Experiment Folder, Rack, Rack Position, Instrument, Acquisition Batch </p>
+        <table class="table table-striped table-bordered table-condensed table-smaller">
+            <tbody>
+                <tr>
+                    <th>Sample ID</th><th>Experiment Number</th><th>Experiment Folder</th><th>Rack</th><th>Rack position</th><th>Instrument</th><th>Acquisition batch</th>
+                </tr>
+                <tr>
+                    <td>Sample_1</td><td>10</td><td>Serum_Rack1_SLT_161213</td><td>1</td><td>A1</td><td>NMR01</td><td>1</td>
+                </tr>
+                <tr>
+                    <td>Sample_1</td><td>11</td><td>Serum_Rack1_SLT_161213</td><td>1</td><td>A1</td><td>NMR01</td><td>1</td>
+                </tr>
+                <tr>
+                    <td>Sample_1</td><td>12</td><td>Serum_Rack1_SLT_161213</td><td>1</td><td>A1</td><td>NMR01</td><td>1</td>
+                </tr>
+                <tr>
+                    <td>Sample_2</td><td>20</td><td>Serum_Rack1_SLT_161213</td><td>1</td><td>A2</td><td>NMR01</td><td>1</td>
+                </tr>
+                <tr>
+                    <td>Sample_2</td><td>21</td><td>Serum_Rack1_SLT_161213</td><td>1</td><td>A2</td><td>NMR01</td><td>1</td>
+                </tr>
+                <tr>
+                    <td>Sample_2</td><td>22</td><td>Serum_Rack1_SLT_161213</td><td>1</td><td>A2</td><td>NMR01</td><td>1</td>
+                </tr>
+                <tr>
+                    <td>Sample_3</td><td>10</td><td>Serum_Rack2_SLT_181213</td><td>2</td><td>A1</td><td>NMR01</td><td>1</td>
+                </tr>
+                <tr>
+                    <td>Sample_3</td><td>11</td><td>Serum_Rack2_SLT_181213</td><td>2</td><td>A1</td><td>NMR01</td><td>1</td>
+                </tr>
+                <tr>
+                    <td>Sample_3</td><td>12</td><td>Serum_Rack2_SLT_181213</td><td>2</td><td>A1</td><td>NMR01</td><td>1</td>
+                </tr>
+                <tr>
+                    <td>Sample_4</td><td>21</td><td>Serum_Rack2_SLT_181213</td><td>2</td><td>A2</td><td>NMR01</td><td>1</td>
+                </tr>
+                <tr>
+                    <td>Sample_4</td><td>22</td><td>Serum_Rack2_SLT_181213</td><td>2</td><td>A2</td><td>NMR01</td><td>1</td>
+                </tr>
+                <tr>
+                    <td>Sample_4</td><td>23</td><td>Serum_Rack2_SLT_181213</td><td>2</td><td>A2</td><td>NMR01</td><td>1</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p>
+            Once imported and assigned to the variable<a href="csm_spectra.html"> spectra </a>(see <a href="#output">Output</a>), the NMR experiment info is saved inside the<a href="csm_nmr_experiment_info.html"> nmr_experiment_info </a>object.
+
+    <pre class="prettyprint lang-matlab">
+>> spectra.nmr_experiment_info
+
+ans =
+
+  <a href="csm_nmr_experiment_info.html">csm_nmr_experiment_info</a> with properties:
+
+       entries: [12x1 containers.Map]
+    sample_ids: {'Sample_1'  'Sample_2'  'Sample_3'  'Sample_4'}
+      filename: '/Users/ghaggart/workspace/matlab/csm-matlab-toolbox/toolbox/csm_tools/misc/example_data/raw_bruker/testNmr...'
+
+
+% View the entry keys - they are unique
+>> unique_ids = keys(spectra.nmr_experiment_info.entries)
+
+unique_ids =
+
+  Columns 1 through 5
+
+    'Serum_Ra...'    'Serum_Ra...'    'Serum_Ra...'    'Serum_Ra...'    'Serum_Ra...'
+
+  Columns 6 through 10
+
+    'Serum_Ra...'    'Serum_Ra...'    'Serum_Ra...'    'Serum_Ra...'    'Serum_Ra...'
+
+  Columns 11 through 12
+
+    'Serum_Ra...'    'Serum_Ra...'
+
+
+ % Get the first unique ids
+>> unique_ids{1}
+
+ans =
+
+Serum_Rack1_SLT_161213-10
+
+
+% Get a specific nmr_experiment_info_entry
+>> nmr_experiment_info_entry = spectra.nmr_experiment_info.entries('Serum_Rack1_SLT_161213-10')
+
+nmr_experiment_info_entry =
+
+  <a href="csm_nmr_experiment_info_entry.html">csm_nmr_experiment_info_entry</a> with properties:
+
+                 unique_id: 'Serum_Rack1_SLT_161213-10'
+                 sample_id: 'Sample_1'
+         experiment_number: '10'
+         experiment_folder: 'Serum_Rack1_SLT_161213'
+                      rack: '1'
+             rack_position: 'A1'
+         acquisition_batch: '1'
+                instrument: 'NMR01'
+    spectrometer_frequency: []
+                peak_width: []
+
+    </pre>
+        <p>
+            NMR Experiment Info can also be accessed as a table by using:
+        <pre class="prettyprint lang-matlab">
+>> spectra.nmr_experiment_info.getTable()
+
+ans =
+
+                 Unique_ID                 Sample_ID     Experiment_Number           Experiment_Folder            Rack    Rack_Position    Instrument    Acquisition_Batch
+    ___________________________________    __________    _________________    ________________________________    ____    _____________    __________    _________________
+
+    'Serum_Rack1_SLT_161213-10'    'Sample_1'    '10'                 'Serum_Rack1_SLT_161213'    '1'     'A1'             'NMR01'       '1'
+    'Serum_Rack1_SLT_161213-11'    'Sample_1'    '11'                 'Serum_Rack1_SLT_161213'    '1'     'A1'             'NMR01'       '1'
+    'Serum_Rack1_SLT_161213-12'    'Sample_1'    '12'                 'Serum_Rack1_SLT_161213'    '1'     'A1'             'NMR01'       '1'
+    'Serum_Rack1_SLT_161213-20'    'Sample_2'    '20'                 'Serum_Rack1_SLT_161213'    '1'     'A2'             'NMR01'       '1'
+    'Serum_Rack1_SLT_161213-21'    'Sample_2'    '21'                 'Serum_Rack1_SLT_161213'    '1'     'A2'             'NMR01'       '1'
+    'Serum_Rack1_SLT_161213-22'    'Sample_2'    '22'                 'Serum_Rack1_SLT_161213'    '1'     'A2'             'NMR01'       '1'
+    'Serum_Rack2_SLT_181213-10'    'Sample_3'    '10'                 'Serum_Rack2_SLT_181213'    '2'     'A1'             'NMR01'       '1'
+    'Serum_Rack2_SLT_181213-11'    'Sample_3'    '11'                 'Serum_Rack2_SLT_181213'    '2'     'A1'             'NMR01'       '1'
+    'Serum_Rack2_SLT_181213-12'    'Sample_3'    '12'                 'Serum_Rack2_SLT_181213'    '2'     'A1'             'NMR01'       '1'
+    'Serum_Rack2_SLT_181213-20'    'Sample_4'    '20'                 'Serum_Rack2_SLT_181213'    '2'     'A2'             'NMR01'       '1'
+    'Serum_Rack2_SLT_181213-21'    'Sample_4'    '21'                 'Serum_Rack2_SLT_181213'    '2'     'A2'             'NMR01'       '1'
+    'Serum_Rack2_SLT_181213-22'    'Sample_4'    '22'                 'Serum_Rack2_SLT_181213'    '2'     'A2'             'NMR01'       '1'
+
+    </pre>
+        </p>
+    </div>
+</div>
+<div class="panel panel-default" id="nmr-calibration-info">
+    <div class="panel-heading">
+        <h3>
+            nmr_calibration_info_path
+        </h3>
+    </div>
+    <div class="panel-body">
+        <p>
+            The nmr_calibration_info.xlsx file contains the data about the calibration specification of the samples.
+        </p>
+        <p>The file MUST contain the following: Sample ID, Sample Type, Calibration Type, Calibration Ref Point, Calibration Search Min, Calibration Search Max</p>
+
+        <table class="table table-striped table-bordered table-condensed table-smallest">
+            <tbody>
+                <tr>
+                    <th>Sample ID</th><th>Sample Type</th><th>Calibration Type</th><th>Calibration Ref Point</th><th>Calibration Search Min</th><th>Calibration Search Max</th>
+                </tr>
+                <tr>
+                    <td>Sample_1</td><td>Serum</td><td>glucose</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>Sample_2</td><td>Serum</td><td>TSP</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>Sample_3</td><td>Serum</td><td>single</td><td>0</td><td>3.03</td><td>3.07</td>
+                </tr>
+                <tr>
+                    <td>Sample_4</td><td>Serum</td><td>glucose</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>
+        <p>
+            Once imported and assigned to the variable<a href="csm_spectra.html"> spectra </a>(see <a href="#output">Output</a>), the NMR calibration info is saved inside the<a href="csm_nmr_experiment_info.html"> nmr_experiment_info </a>object.
+
+    <pre class="prettyprint lang-matlab">
+>> spectra.nmr_calibration_info
+
+ans =
+
+  <a href="csm_nmr_calibration_info.html">csm_nmr_calibration_info</a> with properties:
+
+       entries: [4x1 containers.Map]
+    sample_ids: {'Sample_1'  'Sample_2'  'Sample_3'  'Sample_4'}
+      filename: '/Users/ghaggart/workspace/matlab/IMPaCTS/csm_tools/misc/example_data/raw_bruker/NMR_calibration_info.xlsx'
+
+
+% View the entry keys - they are unique
+>> sample_ids = keys(spectra.nmr_calibration_info.entries)
+
+sample_ids =
+
+    'Sample_2'    'Sample_1'    'Sample_4'    'Sample_3'
+
+
+% Get a specific nmr_calibration_info_entry
+>> nmr_calibration_info_entry = spectra.nmr_calibration_info.entries('Sample_2')
+
+nmr_calibration_info_entry =
+
+
+  <a href="csm_nmr_calibration_info_entry.html">csm_nmr_calibration_info_entry</a> with properties:
+
+                 sample_id: 'Sample_2'
+               sample_type: 'Serum'
+          calibration_type: 'TSP'
+     calibration_ref_point: NaN
+    calibration_search_min: NaN
+    calibration_search_max: NaN
+
+    </pre>
+        <p>
+            NMR Calibration Info can also be accessed as a table by using:
+        <pre class="prettyprint lang-matlab">
+>> spectra.nmr_calibration_info.getTable()
+
+ans =
+
+    Sample_ID     Sample_Type    Calibration_Type    Calibration_Ref_Point    Calibration_Search_Min    Calibration_Search_Max
+    __________    ___________    ________________    _____________________    ______________________    ______________________
+
+    'Sample_2'    'Serum'        'TSP'               NaN                       NaN                       NaN
+    'Sample_1'    'Serum'        'glucose'           NaN                       NaN                       NaN
+    'Sample_4'    'Serum'        'glucose'           NaN                       NaN                       NaN
+    'Sample_3'    'Serum'        'single'              0                      3.03                      3.07
+</pre>
+
+        </p>
+    </div>
+</div>
+<div class="panel panel-default" id="experiment-path">
+    <div class="panel-heading">
+        <h3>
+            experiment_path
+        </h3>
+    </div>
+    <div class="panel-body">
+        <p>
+            The experimental_path is the folder that contains the raw Bruker output of the experiments.
+        </p>
+        <p>
+            The NMR experiment data must match this information.
+        </p>
+    </div>
+</div>
+<div class="panel panel-default" id="output">
+    <div class="panel-heading">
+        <h3>
+            Output
+        </h3>
+    </div>
+    <div class="panel-body">
+        <p>
+            Spectra are imported and broken into pulse program (experiment type) and sample type.
+        <ul>
+            <li>imported.oneDWS : 1D Water suppressed (noesy)</li>
+            <li>imported.cpmg : CPMG</li>
+            <li>imported.diff_edited : Diffusion edited</li>
+            <li>imported.jres : J-RES</li>
+        </ul>
+
+        Each of these variables are a map container, where each key is the sample type (ie serum/plasma) as specified in the NMR calibration info file.
+
+    <pre class="prettyprint lang-matlab">
+% Return a cell array of the sample types
+
+>> serum_oneDWS_sample_types = keys(imported.oneDWS)
+
+serum_oneDWS_sample_types =
+
+    'Serum'
+
+% See all the sample types:
+
+>> imported.sample_types
+
+ans =
+
+    'Serum'
+
+
+% Access and assign the<a href="csm_spectra.html"> spectra </a>stored in the map
+
+>><a href="csm_spectra.html"> spectra </a>= imported.oneDWS('Serum')
+
+spectra =
+
+  <a href="csm_nmr_spectra.html">csm_nmr_spectra</a> with properties:
+
+     nmr_experiment_info: [1x1 <a href="csm_nmr_experiment_info.html">csm_nmr_experiment_info</a>]
+    nmr_calibration_info: [1x1 <a href="csm_nmr_calibration_info.html">csm_nmr_calibration_info</a>]
+           pulse_program: 'oneDWS'
+             inputparser: []
+         csm_data_hashes: [0x1 containers.Map]
+                       X: [4x20010 double]
+                 x_scale: [1x20010 double]
+            x_scale_name: 'ppm'
+           is_continuous: []
+              sample_ids: {'Sample_1'  'Sample_2'  'Sample_3'  'Sample_4'}
+         sample_metadata: [1x1 <a href="csm_sample_metadata.html">csm_sample_metadata</a>]
+              audit_info: [1x1 csm_audit_info]
+                use_hash: []
+                    name: []
+             sample_type: 'Serum'
+    </pre>
+
+        You can also view the errors. Will return the import exceptions.
+        <pre class="prettyprint lang-matlab">
+>> keys(imported.import_errors)
+
+ans =
+
+    'cpmgpr1d'    'jresgpprqf'    'noesygppr1d'
+
+
+>> imported.import_errors('cpmgpr1d')
+
+ans =
+
+     {}</pre>
+        <p>
+            imported.save_dir/imported_data.mat contains the saved object.
+        </p>
+
+    </div>
+</div>
+<div class="panel panel-default" id="basic-qc">
+    <div class="panel-heading">
+        <h3>
+            QC
+        </h3>
+    </div>
+    <div class="panel-body">
+        <p>
+        During import, basic QC is run checking:
+
+            <ol>
+                <li>Which Bruker Data is missing.</li>
+                <li>Which Spectral Metadata is missing.</li>
+                <li>Which NMR experiment info is missing.</li>
+                <li>Which NMR calibration info is missing.</li>
+            </ol>
+
+        The results are saved in   <pre>imported.save_dir/importNMRlog.txt</pre>
+
+        </p>
+
+        <p>More advanced analytical QC can be run by using csm_publish_qc_basic.</p>
+
+<pre class="prettyprint lang-matlab">csm_publish_qc_basic( imported.oneDWS('Serum'), imported.peak_width_output_oneDWS('Serum'), imported.save_dir);</pre>
+    </div>
+</div>
+
+
+            
+
+            
+
+            
+
+            
+
+            
+
+        </div>
+    </div>
+    <div class="row" style="height:100px;"></div>
+</div>
+
+<p style="text-align:center;">Copyright Imperial College London 2017</p>
+
+
+</div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+
+        OpenMenu();
+
+        $(document).ready( function () {
+
+            MenuMover();
+
+        });
+
+        function OpenMenu() {
+
+            var pathname = window.location.pathname;
+            var pathsplit = pathname.split('/');
+
+            var filename = pathsplit[pathsplit.length-1];
+
+            var menu = $('a[href="' + filename + '"]').parent().parent().prop('id');
+
+            if ($('#' + menu).css('display') == 'none'){
+
+                $('#' + menu).css('display','block');
+
+            }
+
+        }
+
+        function MenuMover() {
+
+            $('.menu-button').click(function(ev) {
+
+                ev.preventDefault();
+
+                // Open Menu
+
+                var clicked_parent_menu = $(this).prop('id');
+                var clicked_menu_name = clicked_parent_menu.substring(0,clicked_parent_menu.indexOf('-main-menu'));
+
+                var clicked_sub_menu_select = '#' + clicked_menu_name + '-sub-menu';
+
+
+                $('.menu-button').each(function(ev) {
+
+                    var other_parent_menu = $(this).prop('id');
+                    var other_menu_name = other_parent_menu.substring(0,other_parent_menu.indexOf('-main-menu'));
+
+                    var other_sub_menu_select = '#' + other_menu_name + '-sub-menu';
+
+                    if ($(other_sub_menu_select).is(':hidden') == false && other_menu_name != clicked_menu_name ){
+
+                        $(other_sub_menu_select).slideToggle();
+
+                    }
+                });
+
+                $(clicked_sub_menu_select).slideToggle();
+
+            });
+
+        }
+
+    </script>
+    <script type="text/javascript">
+        !function ($) {
+            $(function(){
+                window.prettyPrint && prettyPrint()
+            })
+        }(window.jQuery)
+    </script>
+</div>
+</body>
+</html>
