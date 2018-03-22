@@ -35,11 +35,104 @@
             <article class="profile-menu" id="menu">
                 <nav class="menu-navigation">
                     <ul class="menu-navigation-list">
-                        <li class="menu-navigation-list-item"><a href="#matlab">Matlab</a></li>
                         <li class="menu-navigation-list-item"><a href="#python">Python</a></li>
                         <li class="menu-navigation-list-item"><a href="#r">R</a></li>
+                        <li class="menu-navigation-list-item"><a href="#matlab">Matlab</a></li>
                     </ul>
                 </nav>
+
+                <div id="python" class="menu-category">
+                    <h3 class="menu-category-name">Python</h3>
+                    <ol class="menu-category-list has-images">
+
+
+
+                        <li class="menu-item">
+                            <div class="menu-item-info">
+                                <h4 class="menu-item-name">nPYc Toolbox</h4>
+                                <span class="menu-item-price">
+                                    <a href="https://github.com/phenomecentre/nPYc-Toolbox" target="_blank">GitHub source</a> |
+                                    <a href="http://npyc-toolbox.readthedocs.io/en/latest/index.html" target="_blank">Documentation</a> |
+                                    <a href="https://opensource.org/licenses/MIT" target="_blank">Licence</a>
+
+                                </span>
+
+                                <p class="menu-item-description">
+                                    <br />
+                                    A Python implementation of the NPC toolchain for the import, quality-control, and preprocessing of metabolic profiling datasets.
+                                    <br /><br />
+                                    Requirements:
+
+                                    <br />
+                                    <br /> - Python3.6
+
+                                </p>
+                            </div>
+                            <div class="menu-item-image has-meta-content">
+                                <img src="static/images/sampledb_logo_276.png" />
+                            </div>
+                        </li>
+
+                        <li class="menu-item">
+                            <div class="menu-item-info">
+                                <h4 class="menu-item-name">SampleDB</h4>
+                                <span class="menu-item-price">
+                                    <a href="https://github.com/csmsoftware/SampleDB" target="_blank">GitHub source</a> |
+                                    <a href="https://github.com/csmsoftware/SampleDB/blob/master/licence.txt" target="_blank">Licence</a>
+
+                                </span>
+
+                                <p class="menu-item-description">
+                                    <br />
+                                    Web app for storing sample location data for HTA and GDPR compliance.
+                                    <br /><br />
+                                    Requirements:
+
+                                    <br />
+                                    <br /> - Linux
+                                    <br /> - Python3.6
+                                    <br /> - SQLite3/PostgreSQL/MySQL,
+                                    <br /> - Nginx/Apache
+                                    <br /> - uWSGI/Gunicorn
+                                    <br /> - Redis
+
+                                </p>
+                            </div>
+                            <div class="menu-item-image has-meta-content">
+                                <img src="static/images/sampledb_logo_276.png" />
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+                <div id="r" class="menu-category">
+                    <h3 class="menu-category-name">R</h3>
+                    <ol class="menu-category-list has-images">
+                        <li class="menu-item">
+                            <div class="menu-item-info">
+                                <h4 class="menu-item-name">PeakPantheR</h4>
+                                <span class="menu-item-price">
+                                    <a href="https://github.com/phenomecentre/peakPantheR" target="_blank">GitHub source</a>
+                                    <a href="http://htmlpreview.github.io/?https://github.com/phenomecentre/peakPantheR/blob/master/inst/doc/getting-started.html" target="_blank">Documentation</a> |
+                                    <a href="http://choosealicense.com/licenses/gpl-3.0/" target="_blank">Licence</a>
+                                </span>
+
+                                <p class="menu-item-description">
+                                    <br />
+                                    peakPantheR (_Peak Picking and ANnoTation of High resolution Experiments in R_) is a  R and Shiny package for the parallel detection, integration and reporting of pre-defined features in high number of MS files
+                                    <br /><br />
+                                    Requirements:
+
+                                    <br /> - R (>= 3.4.0)
+
+                                </p>
+                            </div>
+                            <div class="menu-item-image has-meta-content">
+                                <img src="static/images/peakPantheR_276-276.png" />
+                            </div>
+                        </li>
+                    </ol>
+
+                </div>
 
                 <div id="matlab" class="menu-category">
                     <h3 class="menu-category-name">Matlab</h3>
@@ -59,7 +152,7 @@
                                     <br /><br />
                                     A general purpose toolbox for NMR and peak-picked MS spectra that covers data import, export, preprocessing and basic metabolomic analysis.
                                     <br /><br />
-                             Requirements:
+                                    Requirements:
 
                                     <br />
                                     &nbsp;&nbsp;&nbsp;&nbsp;
@@ -94,43 +187,6 @@
                         </li>
 
                     </ol>
-                </div>
-                <div id="python" class="menu-category">
-                    <h3 class="menu-category-name">Python</h3>
-                    <ol class="menu-category-list has-images">
-                        <li class="menu-item">
-                            <div class="menu-item-info">
-                                <h4 class="menu-item-name">SampleDB</h4>
-                                <span class="menu-item-price">
-                                    <a href="https://github.com/csmsoftware/SampleDB" target="_blank">GitHub source</a>
-                                </span>
-
-                                <p class="menu-item-description">
-                                    <br />
-                                    Web app for storing sample location data for HTA and GDPR compliance.
-                                    <br /><br />
-                                    Requirements:
-
-                                    <br />
-                                    <br /> - Linux
-                                    <br /> - Python3.6
-                                    <br /> - SQLite3/PostgreSQL/MySQL,
-                                    <br /> - Nginx/Apache
-                                    <br /> - uWSGI/Gunicorn
-                                    <br /> - Redis
-
-                                </p>
-                            </div>
-                            <div class="menu-item-image has-meta-content">
-                                <img src="static/images/sampledb_logo_276.png" />
-                            </div>
-                        </li>
-                    </ol>
-                </div>
-                <div id="r" class="menu-category">
-                    <h3 class="menu-category-name">R</h3>
-                    <p>Coming soon.</p>
-
                 </div>
 
                 <a id="btn-view-full-menu" class="btn-view-full-menu" href="https://github.com/csmsoftware/">View full list of repositories</a>
