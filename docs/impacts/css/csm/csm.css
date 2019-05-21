@@ -39,7 +39,7 @@ h1,h2,h3,h4 {
 }
 
 .sub-menu {
-       display:none;
+    display:none;
 }
 
 .sub-menu.active {
